@@ -86,7 +86,35 @@ void loop() {
     // Displaying 2
     setSevenSegment(2);
     value = 2;
-  } // (Kode lainnya untuk angka 3 hingga 9)
+  } else if (request.indexOf("/Req=3") != -1) {
+  // Displaying 3
+  setSevenSegment(3);
+  value = 3;
+} else if (request.indexOf("/Req=4") != -1) {
+  // Displaying 4
+  setSevenSegment(4);
+  value = 4;
+} else if (request.indexOf("/Req=5") != -1) {
+  // Displaying 5
+  setSevenSegment(5);
+  value = 5;
+} else if (request.indexOf("/Req=6") != -1) {
+  // Displaying 6
+  setSevenSegment(6);
+  value = 6;
+} else if (request.indexOf("/Req=7") != -1) {
+  // Displaying 7
+  setSevenSegment(7);
+  value = 7;
+} else if (request.indexOf("/Req=8") != -1) {
+  // Displaying 8
+  setSevenSegment(8);
+  value = 8;
+} else if (request.indexOf("/Req=9") != -1) {
+  // Displaying 9
+  setSevenSegment(9);
+  value = 9;
+}
 
   // Check for DP toggle request
   if (request.indexOf("/DPToggle") != -1) {
