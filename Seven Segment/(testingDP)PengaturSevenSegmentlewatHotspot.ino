@@ -225,7 +225,13 @@ void sendHttpResponse(WiFiClient client, int value) {
   client.print("<p align=center>Currently Displaying = ");
   client.print(value);
   client.println("</p>");
-  // (Tambahkan tombol untuk angka 1 hingga 9 seperti yang Anda lakukan sebelumnya)
+   for (int i = 1; i <= 9; i++) {
+    client.print("<p align=center><a href=\"/Req=");
+    client.print(i);
+    client.print("\"><button>Display-");
+    client.print(i);
+    client.println("</button></a></p>");
+  }
   // Add button to toggle DP
   client.print("<p align=center><a href=\"/DPToggle\"><button>Toggle DP</button></a></p>");
   client.println("</body>");
