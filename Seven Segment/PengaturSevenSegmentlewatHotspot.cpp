@@ -199,23 +199,6 @@ void setSevenSegment(int number) {
       break;
   }
 }
-//   switch (number) {
-//     case 1:
-//       // Aktifkan segmen-segmen yang diperlukan untuk menampilkan 1
-//       digitalWrite(b, HIGH);
-//       digitalWrite(c, HIGH);
-//       break;
-//     case 2:
-//       // Aktifkan segmen-segmen yang diperlukan untuk menampilkan 2
-//       digitalWrite(a, HIGH);
-//       digitalWrite(b, HIGH);
-//       digitalWrite(g, HIGH);
-//       digitalWrite(e, HIGH);
-//       digitalWrite(d, HIGH);
-//       break;
-//     // Add similar cases for other numbers (3 to 9) here
-//   }
-// }
 
 void sendHttpResponse(WiFiClient client, int value) {
   client.println("HTTP/1.1 200 OK");
