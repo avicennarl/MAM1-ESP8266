@@ -127,7 +127,89 @@ void loop() {
   sendHttpResponse(client, value);
 }
 
-// (Fungsi setSevenSegment() sama seperti yang Anda tulis)
+void setSevenSegment(int number) {
+  // Set semua segmen menjadi non-aktif (HIGH)
+  digitalWrite(a, HIGH);
+  digitalWrite(b, HIGH);
+  digitalWrite(c, HIGH);
+  digitalWrite(d, HIGH);
+  digitalWrite(e, HIGH);
+  digitalWrite(f, HIGH);
+  digitalWrite(g, HIGH);
+
+  switch (number) {
+    case 1:
+      // Aktifkan segmen-segmen yang diperlukan untuk menampilkan 1
+      digitalWrite(b, LOW);
+      digitalWrite(c, LOW);
+      break;
+    case 2:
+      // Aktifkan segmen-segmen yang diperlukan untuk menampilkan 2
+      digitalWrite(a, LOW);
+      digitalWrite(b, LOW);
+      digitalWrite(g, LOW);
+      digitalWrite(e, LOW);
+      digitalWrite(d, LOW);
+      break;
+    case 3:
+      // Aktifkan segmen-segmen yang diperlukan untuk menampilkan 3
+      digitalWrite(a, LOW);
+      digitalWrite(b, LOW);
+      digitalWrite(c, LOW);
+      digitalWrite(d, LOW);
+      digitalWrite(g, LOW);
+      break;
+    case 4:
+      // Aktifkan segmen-segmen yang diperlukan untuk menampilkan 4
+      digitalWrite(b, LOW);
+      digitalWrite(c, LOW);
+      digitalWrite(f, LOW);
+      digitalWrite(g, LOW);
+      break;
+    case 5:
+      // Aktifkan segmen-segmen yang diperlukan untuk menampilkan 5
+      digitalWrite(a, LOW);
+      digitalWrite(c, LOW);
+      digitalWrite(d, LOW);
+      digitalWrite(f, LOW);
+      digitalWrite(g, LOW);
+      break;
+    case 6:
+      // Aktifkan segmen-segmen yang diperlukan untuk menampilkan 6
+      digitalWrite(a, LOW);
+      digitalWrite(c, LOW);
+      digitalWrite(d, LOW);
+      digitalWrite(e, LOW);
+      digitalWrite(f, LOW);
+      digitalWrite(g, LOW);
+      break;
+    case 7:
+      // Aktifkan segmen-segmen yang diperlukan untuk menampilkan 7
+      digitalWrite(a, LOW);
+      digitalWrite(b, LOW);
+      digitalWrite(c, LOW);
+      break;
+    case 8:
+      // Aktifkan segmen-segmen yang diperlukan untuk menampilkan 8
+      digitalWrite(a, LOW);
+      digitalWrite(b, LOW);
+      digitalWrite(c, LOW);
+      digitalWrite(d, LOW);
+      digitalWrite(e, LOW);
+      digitalWrite(f, LOW);
+      digitalWrite(g, LOW);
+      break;
+    case 9:
+      // Aktifkan segmen-segmen yang diperlukan untuk menampilkan 9
+      digitalWrite(a, LOW);
+      digitalWrite(b, LOW);
+      digitalWrite(c, LOW);
+      digitalWrite(d, LOW);
+      digitalWrite(f, LOW);
+      digitalWrite(g, LOW);
+      break;
+  }
+}
 
 void sendHttpResponse(WiFiClient client, int value) {
   client.println("HTTP/1.1 200 OK");
