@@ -130,8 +130,6 @@ void setup(void) {
   Serial.println(ssid);
   Serial.print("IP address: http://");
   Serial.println(WiFi.localIP());
-
-//multicast DNS   //Robojax.com 28BYJ-48 Steper Motor Control
   if (MDNS.begin("robojaxESP8266")) {
     Serial.println("MDNS responder started");
     Serial.println("access via http://robojaxESP8266");
@@ -147,7 +145,6 @@ void setup(void) {
 void loop(void) {
   server.handleClient();
   MDNS.update();
-  //Watch details at my Arduino Course at Udemy.com
 if(dirStatus ==1){ 
    poleStep++; 
     driveStepper(poleStep);    
@@ -163,24 +160,10 @@ if(dirStatus ==1){
  if(poleStep<0){ 
    poleStep=7; 
  } 
-
    delay(1);
-   //Robojax.com 28BYJ-48 Steper Motor Control  
 }
 
-
-
-/*
- * motorControl()
- * updates the value of "dirStatus" varible to 1, 2 or 3
- * returns nothing
- * written by Ahmad Shamshiri
- * on Wednesday April 19, 2020 at 18:03 in Ajax, Ontario, Canada
- * www.robojax.com
- */
 void motorControl() {
-
-//Watch details at my Arduino Course at Udemy.com
     if(server.arg(argId[0]) == "on")
     {
       dirStatus = 1;// CCW 
@@ -194,26 +177,14 @@ void motorControl() {
     }else if(server.arg(argId[1]) == "off"){
       dirStatus = 3;  // motor OFF
           
-    }  
-
-  
-
+    }   
   handleRoot();
-}//motorControl end
+}
 
-
-/*
- * @brief sends signal to the motor
- * @param "c" is integer representing the pol of motor
- * @return does not return anything
- * 
- * www.Robojax.com code June 2019
- */
 void driveStepper(int c)
 {
-  //Watch details at my Arduino Course at Udemy.com
      digitalWrite(Pin1, pole1[c]);  
      digitalWrite(Pin2, pole2[c]); 
      digitalWrite(Pin3, pole3[c]); 
      digitalWrite(Pin4, pole4[c]);   
-}//driveStepper end here
+}
