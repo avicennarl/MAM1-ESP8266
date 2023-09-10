@@ -57,7 +57,7 @@ void loop() {
 }
 
 void handleRoot() {
-  String html = "<html><head>;
+  String html = "<html><head>";
   html += "<style>";
   html += "body {";
   html += "  font-family: Arial, sans-serif;";
