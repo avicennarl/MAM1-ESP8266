@@ -25,7 +25,7 @@ Log Kegiatan:
 <br>\
 **05/09/2023**
 - Membuat antarmuka yang pas untuk layar kecil/mobile
-- Membuat antarmuka menghubungkan LCD dengan memasukan input huruf yang kemudian ditampilkan pada LCD (by Dzikri Ibnu F)
+- Membuat antarmuka menghubungkan LCD dengan memasukan input huruf yang kemudian ditampilkan pada LCD (by Dzikri Ibnu F (@dz1kri)
 - Kombinasi input Keypad dan input virtual via Hotspot (by Arrizal Ahmad Z)
 - Penyesuaian antarmuka pada layar ponsel
 - mencari solusi untuk tombol kembali setelah pengguna menekan tombol perintah
