@@ -67,7 +67,7 @@ void handleRoot() {
   html += ".container {";
   html += "  max-width: 600px;";
   html += "  margin: 0 auto;";
-html += "  padding: 20px;";
+  html += "  padding: 20px;";
   html += "  background-color: white;";
   html += "  border-radius: 10px;";
   html += "  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);";
