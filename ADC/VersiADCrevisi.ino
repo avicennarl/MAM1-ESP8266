@@ -74,7 +74,8 @@ void handleRoot() {
   html += "}";
   html += ".button-container {";
   html += "  display: grid;";
-  html += "  grid-template-columns: repeat(4, 1fr);"; // Ubah menjadi 3 kolom dan 4 baris
+  html += "  grid-template-columns: repeat(3, 1fr);";
+  html += "  grid-template-rows: repeat(4, 1fr);";
   html += "  gap: 20px;";
   html += "  align-items: center;";
   html += "  justify-items: center;";
