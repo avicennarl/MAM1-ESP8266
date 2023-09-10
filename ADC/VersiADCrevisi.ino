@@ -58,9 +58,63 @@ void loop() {
 
 void handleRoot() {
   String html = "<html><head>;
-  
-  
-  </body></html>";
+  html += "<style>";
+  html += "body {";
+  html += "  font-family: Arial, sans-serif;";
+  html += "  text-align: center;";
+  html += "  background-color: #f2f2f2;";
+  html += "}";
+  html += ".container {";
+  html += "  max-width: 600px;";
+  html += "  margin: 0 auto;";
+html += "  padding: 20px;";
+  html += "  background-color: white;";
+  html += "  border-radius: 10px;";
+  html += "  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);";
+  html += "}";
+  html += ".button-container {";
+  html += "  display: grid;";
+  html += "  grid-template-columns: repeat(4, 1fr);"; // Ubah menjadi 3 kolom dan 4 baris
+  html += "  gap: 20px;";
+  html += "  align-items: center;";
+  html += "  justify-items: center;";
+  html += "}";
+  html += ".button {";
+  html += "  width: 60px;";
+  html += "  height: 60px;";
+  html += "  font-size: 20px;";
+  html += "  background-color: #007BFF;";
+  html += "  color: white;";
+  html += "  border: none;";
+  html += "  border-radius: 50%;";
+  html += "  cursor: pointer;";
+  html += "  text-align: center;";
+  html += "  line-height: 60px;";
+  html += "  text-decoration: none;";
+  html += "}";
+  html += ".button-off {";
+  html += "  background-color: #DC3545;";
+  html += "}";
+  html += ".title {";
+  html += "  font-size: 24px;";
+  html += "  margin-bottom: 10px;";
+  html += "}";
+  html += "</style>";
+  html += "</head><body>";
+  html += "<div class='container'>";
+  html += "<h1 class='title'>ADC NOTE CONTROL</h1>";
+  html += "</div>";
+  const char *noteNames[] = {"Do", "Re", "Mi", "Fa", "Sol", "La", "Si", "Do"};
+  html += "<div class='container button-container'>";
+  for (int i = 0; i < 8; i++) {
+    html += "<a href='/playSound?note=" + String(i) + "' target='_self' class='button'>" + noteNames[i] + "</a>";
+  }
+  html += "<a href='/playBalonku' class='button'>Play Balonku</a>";
+  html += "<a href='/stopSound' class='button button-off'>Stop Lagu</a>";
+  html += "<a href='/deactivatePotentiometer' class='button button-off'>OFF</a>";
+  html += "<a href='/activatePotentiometer' class='button'>ON</a>";
+  html += "</div>";
+  html += "</body></html>";
   server.send(200, "text/html", html);
 }
 
